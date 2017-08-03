@@ -22,16 +22,16 @@ namespace azureEZtable.ViewModel
         private async void DoitCommandAction(object obj)
         {
 			Data data = new Data();
-			data.Accuracy = "11";
-			data.Latitude = "122";
-			data.Longitude = "3";
+			data.Accuracy = "111";
+			data.Latitude = "111";
+			data.Longitude = "111";
 			data.Route = "0";
 			data.Timestamp = DateTime.Now.Ticks.ToString();
 			data.User = "msg";
 
 			var content = await service.GetDataAsync();
 
-			await service.SaveTaskAsync(data);
+			await service.SaveDataAsync(data);
         }
     }
 }
